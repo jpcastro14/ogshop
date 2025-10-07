@@ -2,9 +2,13 @@ import { useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import marijuana from "./assets/marijuana.png";
+import { CartContext } from "../../contexts/CartContext";
+import { useContext } from "react";
 
 export function Header() {
   const [state, setState] = useState<boolean>(true);
+  const { cart, cartAmount } = useContext(CartContext);
+
   return (
     <header
       className="w-full px-1 bg-slate-950 "
@@ -23,9 +27,11 @@ export function Header() {
           to="/cart"
         >
           <FiShoppingCart />
-          <span className="absolute bg-green-400 px-2.5 rounded-full w-6 h-6 justify-center align-middle flex -right-2.5 -top-0.5 ">
-            1
-          </span>
+          {cartAmount > 0 && (
+            <span className="absolute bg-green-400 px-2.5 rounded-full w-6 h-6 justify-center align-middle flex -right-2.5 -top-0.5 ">
+              {cartAmount}
+            </span>
+          )}
         </Link>
       </nav>
     </header>
