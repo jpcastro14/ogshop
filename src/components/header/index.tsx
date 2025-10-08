@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 export function Header() {
   const [state, setState] = useState<boolean>(true);
-  const { cart, cartAmount } = useContext(CartContext);
+  const { cartAmount } = useContext(CartContext);
 
   return (
     <header

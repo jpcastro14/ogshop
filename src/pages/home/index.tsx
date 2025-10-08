@@ -12,7 +12,7 @@ export interface ProductsProps {
 }
 
 export function Home() {
-  const { cart, cartAmount, addItem } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
   const [products, setProducts] = useState<ProductsProps[]>([]);
   useEffect(() => {
     async function getProducts() {
