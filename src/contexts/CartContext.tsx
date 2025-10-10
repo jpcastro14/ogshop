@@ -21,6 +21,7 @@ interface CartProps {
   cover: string;
   amount: number;
   total: number;
+  available: number;
 }
 
 interface CartProviderProps {
@@ -37,6 +38,9 @@ function CartProvider({ children }: CartProviderProps) {
   function addItem(newProduct: ProductsProps) {
     //verifica se existe um item no carrinho
     const indexItem = cart.findIndex((item) => item.id === newProduct.id);
+    const availableqtd = newProduct.available;
+
+    console.log(availableqtd);
 
     //se existir um produto no carrinho
     if (indexItem !== -1) {
@@ -45,18 +49,25 @@ function CartProvider({ children }: CartProviderProps) {
       //Aumenta a quantidade do produto selecionado
       cartItem[indexItem].amount = cartItem[indexItem].amount + 1;
 
+      if (cartItem[indexItem].amount > availableqtd) {
+        cartItem[indexItem].amount = availableqtd;
+
+        messageApi.open({
+          type: "error",
+          content: `Somente ${cartItem[indexItem].available} gramas disponíveis `,
+        });
+
+        setCart((product) => [...product]);
+      }
+
       //Calcula o preço total do produto, multiplicando a quantidade pelo preço.
       cartItem[indexItem].total =
         cartItem[indexItem].amount * cartItem[indexItem].price;
 
       setCart((product) => [...product]);
       createTotal(cartItem);
+
       //Abre alerta para informar que um produto foi adicionado ao carrinho
-      messageApi.open({
-        type: "success",
-        content: `Quantidade atualizada no carrinho -> ${cartItem[indexItem].amount}`,
-        duration: 3,
-      });
       return;
     }
 

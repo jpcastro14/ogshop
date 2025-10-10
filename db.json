@@ -5,70 +5,80 @@
       "title": "Colombia Gold",
       "harvest": " Janeiro 2025",
       "price": 18,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 10
     },
     {
       "id": 2,
       "title": "Sour Diesel",
       "harvest": " Março 2025",
       "price": 25,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 20
     },
     {
       "id": 3,
       "title": "Lemon Haze",
       "harvest": " Julho 2025",
       "price": 28,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 12
     },
     {
       "id": 4,
       "title": "Banana Kush",
       "harvest": "Agosto 2025",
       "price": 20,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 5
     },
     {
       "id": 5,
       "title": "Live Rosin",
       "harvest": " Setembro 2025",
       "price": 120,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 10
     },
     {
       "id": 6,
       "title": "Hash Crumble",
       "harvest": " Dezembro 2024",
       "price": 120,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 2
     },
     {
       "id": 7,
       "title": "Hash Ice",
       "harvest": " Dezembro 2024",
       "price": 95,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 2
     },
     {
       "id": 8,
       "title": "Jamaican Blue",
       "harvest": " Abril 2025",
       "price": 45,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 20
     },
     {
       "id": 9,
       "title": "Og Kush",
       "harvest": " Dezembro 2024",
       "price": 40,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 10
     },
     {
       "id": 10,
       "title": "Tanzania Peaberry",
       "harvest": " Outubro 2025",
       "price": 30,
-      "cover": "https://imgur.com/VFy0Zbl.jpg"
+      "cover": "https://imgur.com/VFy0Zbl.jpg",
+      "available": 10
     }
   ]
 }

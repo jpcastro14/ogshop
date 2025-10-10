@@ -9,6 +9,7 @@ export interface ProductsProps {
   harvest: string;
   price: number;
   cover: string;
+  available: number;
 }
 
 export function Home() {
