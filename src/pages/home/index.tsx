@@ -12,7 +12,8 @@ export interface ProductsProps {
 }
 
 export function Home() {
-  const { addItem } = useContext(CartContext);
+  const { addItem, contextHolder } = useContext(CartContext);
+
   const [products, setProducts] = useState<ProductsProps[]>([]);
   useEffect(() => {
     async function getProducts() {
@@ -24,6 +25,7 @@ export function Home() {
 
   return (
     <>
+      {contextHolder}
       {/* Elemento visual de divisão "mais vendidos" */}
       <div className="w-full max-w-7xl flex items-start border-b-2 border-b-green-400 m-10 mx-auto px-5">
         Mais vendidos
@@ -66,7 +68,7 @@ export function Home() {
                 />
               </button>
             </div>
-            {product.price < 20 && (
+            {product.price <= 30 && (
               <span className="absolute bg-green-400 rounded-full w-12 h-12 items-center justify-center font- flex top-4 right-4 ">
                 <BsArrowDown size={20} />
               </span>
