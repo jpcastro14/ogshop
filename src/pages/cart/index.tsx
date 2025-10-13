@@ -31,6 +31,8 @@ export function Cart() {
         </>
       )}
 
+      {/* Teste de branch */}
+
       {cart.map((product) => (
         <div
           key={product.id}
